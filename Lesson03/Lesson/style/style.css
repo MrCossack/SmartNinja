@@ -1,0 +1,48 @@
+.box {
+    height: 100px;
+    width: 300px;
+    background-color: red;
+}
+
+.inline_text {
+    display:inline;
+}
+
+#container2 {
+    margin: 200px 0px 0 50px;
+}
+
+#box_1 {
+    background-color: blue;
+    margin: 50px;
+}
+
+#box_2 {
+    background-color: green;
+    margin: 0 auto;  /*zentrieren von elementen*/
+}
+
+#box_3 {
+    background-color: grey;
+    border: 3px solid black;
+}
+
+#box_4 {
+    background-color: green;
+    position:fixed;
+    top: 100px;
+    left:100px;
+    z-index:10;
+}
+
+#box_5 {
+    background-color: blue;
+    position: relative;
+}
+
+#box_6 {
+    background-color: grey;
+    position: absolute;
+    top: 400px;
+    left:300px;
+}

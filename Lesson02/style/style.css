@@ -1,0 +1,16 @@
+html, body {
+    background-color: coral;
+}
+
+p {
+    /*color: white;*/
+    margin-bottom: 35px;
+}
+
+.listelement {
+    color: grey;
+}
+
+#hobby {
+    color: pink;
+}

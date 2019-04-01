@@ -1,0 +1,31 @@
+@media(min-width: 768px){
+}
+
+.container {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    /*margin: 40px auto 0 auto;*/
+    /*width: 75%;*/
+    /*align-items: flex-start;*/
+    /*justify-content: space-between;*/
+    /*height: 1000px;*/
+}
+
+.box{
+    /*width: 30%;*/
+}
+
+#main {
+    background-color: pink;
+    /*flex: 2;*/
+}
+
+#left {
+    background-color: red;
+    /*flex: 1;*/
+}
+
+#right {
+    background-color: brown;
+    /*flex: 1;*/
+}
