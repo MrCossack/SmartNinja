@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="static/css/style.css">
+{% extends "base.html" %}
 
-    <title>hello smartninja</title>
-</head>
-<body>
-    <h1>welcome back to html</h1>
-    <a href="/impressum">impressum</a>
-</body>
-</html>
+{% block title %}
+    <title>Smart ninja jinja title</title>
+{% endblock title %}
+
+{% block content %}
+    <h1>{{page_title}}</h1>
+    <p>Hallo index html page</p>
+
+    {% for city in cities %}
+        <p>{{city}}</p>
+    {% endfor %}
+
+{% endblock content %}
