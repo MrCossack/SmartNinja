@@ -1,17 +1,21 @@
 from flask import Flask, render_template, request, redirect, url_for, make_response
-from Lesson18.User import User
+from smartninja_nosql.odm import Model
 
 app = Flask(__name__)
+
+class User(Model):
+    def __init__(self, name, mail, **kwargs):
+        self.name = name
+        self.mail = mail
+
+        super().__init__(**kwargs)
 
 
 @app.route("/")
 def index():
     email_address = request.cookies.get("user_mail")
 
-    if email_address:
-        user = User.fetch_one(query=["mail", "==", email_address])
-    else:
-        user = None
+    user = User.fetch_one(query=["mail", "==", email_address])
 
     return render_template("index.html", user=user)
 
@@ -29,13 +33,7 @@ def login():
 
     return response
 
-@app.route("/logout")
-def logout():
-    response = make_response(redirect(url_for("index")))
-    response.set_cookie("user_mail", expires=0)
 
-    return response
 
 if __name__ == "__main__":
-    app.debug = True
     app.run()
